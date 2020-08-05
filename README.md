@@ -10,3 +10,6 @@ After the break time sent by you is passed, it will sound alarm to remind you to
 You can pause timer by clicking the same button you used to start the timer and click it again to start it back up.
 
 You can also reset timer to its default value by clicking the reset button.
+
+Link to background image source: 
+https://www.pexels.com/photo/black-pen-beside-brown-bottle-near-laptop-3773850/
