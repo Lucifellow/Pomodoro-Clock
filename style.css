@@ -1,0 +1,409 @@
+.glowing {
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: all 2s ease;
+}
+
+@keyframes glow {
+  50% {
+    box-shadow: 0px 0px 0px 1px #92f8f6;
+  }
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background: url("https://i.imgur.com/drqa8QG.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-top: 3vw;
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer-label {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  border: 6px solid #4deeea;
+  border-radius: 50%;
+  box-shadow: 2px 2px 59px 2px #92f8f6;
+}
+
+#time-left {
+  font-size: x-large;
+}
+
+#break-container {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 3vw;
+}
+
+#break-increment {
+  margin-right: 2vw;
+}
+
+#break-decrement {
+  margin-left: 2vw;
+}
+
+#session-container {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 3vw;
+}
+
+#session-increment {
+  margin-right: 2vw;
+}
+
+#session-decrement {
+  margin-left: 2vw;
+}
+
+#control-button-container {
+  margin-top: 2vw;
+}
+
+#start_stop {
+  margin-left: 5vw;
+  padding: 1vw;
+}
+
+#reset {
+  margin-left: 2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+
+@media (min-width: 2400px) {
+  #timer-label {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+
+  #time-left {
+    font-size: xx-large;
+  }
+
+  #break-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+  }
+
+  #break-length {
+    font-size: xx-large;
+  }
+
+  #session-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+  }
+
+  #session-length {
+    font-size: xx-large;
+  }
+
+  #start_stop {
+    margin-left: 5vw;
+    padding: 1vw;
+  }
+}
+@media (min-width: 862px) and (max-width: 1050px) {
+  #timer-label {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  #break-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 4vw;
+  }
+
+  #session-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 4vw;
+  }
+
+  #start_stop {
+    margin-left: 5vw;
+  }
+}
+@media (min-width: 631px) and (max-width: 861px) {
+  #timer-label {
+    padding-top: 6vw;
+    padding-bottom: 5vw;
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+  }
+
+  #break-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 5vw;
+  }
+
+  #break-increment {
+    margin-right: 4vw;
+  }
+
+  #break-decrement {
+    margin-left: 4vw;
+  }
+
+  #session-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 5vw;
+  }
+
+  #session-increment {
+    margin-right: 4vw;
+  }
+
+  #session-decrement {
+    margin-left: 4vw;
+  }
+
+  #start_stop {
+    margin-left: 10vw;
+    padding: 2vw;
+  }
+
+  #reset {
+    margin-left: 4vw;
+  }
+}
+@media (min-width: 520px) and (max-width: 630px) {
+  #timer-label {
+    padding-top: 6vw;
+    padding-bottom: 5vw;
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+  }
+
+  #break-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 5vw;
+  }
+
+  #break-increment {
+    margin-right: 6vw;
+  }
+
+  #break-decrement {
+    margin-left: 6vw;
+  }
+
+  #session-container {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 5vw;
+  }
+
+  #session-increment {
+    margin-right: 6vw;
+  }
+
+  #session-decrement {
+    margin-left: 6vw;
+  }
+
+  #control-button-container {
+    margin-top: 8vw;
+  }
+
+  #start_stop {
+    margin-left: 10vw;
+    padding: 2vw;
+  }
+
+  #reset {
+    margin-left: 4vw;
+  }
+}
+@media (min-width: 461px) and (max-width: 519px) {
+  #timer-label {
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+    margin-top: 12vw;
+    margin-bottom: 12vw;
+  }
+
+  #break-container {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    margin-left: 5vw;
+  }
+
+  #break-increment {
+    margin-right: 7vw;
+  }
+
+  #break-decrement {
+    margin-left: 7vw;
+  }
+
+  #session-container {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    margin-left: 5vw;
+  }
+
+  #session-increment {
+    margin-right: 7vw;
+  }
+
+  #session-decrement {
+    margin-left: 7vw;
+  }
+
+  #control-button-container {
+    margin-top: 8vw;
+  }
+
+  #start_stop {
+    margin-left: 10vw;
+    padding: 3vw;
+  }
+
+  #reset {
+    margin-left: 5vw;
+  }
+}
+@media (min-width: 350px) and (max-width: 460px) {
+  #timer-label {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    margin-top: 12vw;
+    margin-bottom: 12vw;
+  }
+
+  #break-container {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    margin-left: 7vw;
+  }
+
+  #break-increment {
+    margin-right: 8vw;
+  }
+
+  #break-decrement {
+    margin-left: 8vw;
+  }
+
+  #session-container {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    margin-left: 7vw;
+  }
+
+  #session-increment {
+    margin-right: 8vw;
+  }
+
+  #session-decrement {
+    margin-left: 8vw;
+  }
+
+  #control-button-container {
+    margin-top: 10vw;
+  }
+
+  #start_stop {
+    margin-left: 15vw;
+    padding: 5vw;
+  }
+
+  #reset {
+    margin-left: 7vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+}
+@media (max-width: 349px) {
+  #timer-label {
+    padding-top: 15vw;
+    padding-bottom: 15vw;
+    margin-top: 13vw;
+    margin-bottom: 13vw;
+  }
+
+  #break-container {
+    margin-top: 7vw;
+    margin-bottom: 7vw;
+    margin-left: 8vw;
+  }
+
+  #break-increment {
+    margin-right: 13vw;
+  }
+
+  #break-decrement {
+    margin-left: 13vw;
+  }
+
+  #session-container {
+    margin-top: 7vw;
+    margin-bottom: 7vw;
+    margin-left: 8vw;
+  }
+
+  #session-increment {
+    margin-right: 13vw;
+  }
+
+  #session-decrement {
+    margin-left: 13vw;
+  }
+
+  #control-button-container {
+    margin-top: 15vw;
+  }
+
+  #start_stop {
+    margin-left: 16vw;
+    padding: 5vw;
+  }
+
+  #reset {
+    margin-left: 10vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,398 @@
+$main-font:'Open Sans', sans-serif;
+
+@mixin setMarginTopBottom($top, $bottom) {
+    margin-top:$top;
+    margin-bottom:$bottom;
+}
+
+@mixin paddingTopBottom($top,$bottom) {
+    padding-top:$top;
+    padding-bottom:$bottom;
+}
+
+//glowing animation
+.glowing{
+    animation-name:glow;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    transition: all 2s ease;
+}
+
+@keyframes glow{
+    50%{
+        box-shadow: 0px 0px 0px 1px #92f8f6;;
+    }
+}
+
+body{
+    font-family: $main-font;
+    color:white;
+    background:url("https://i.imgur.com/drqa8QG.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+h1{
+    margin-top: 3vw;
+    text-align: center;
+}
+
+button{
+    background-color:white;
+    border:none;
+    border-radius:15px;
+}  
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer-label{
+    @include paddingTopBottom(3vw,3vw);
+    @include setMarginTopBottom(3vw,3vw);
+    border: 6px solid #4deeea;
+    border-radius:50%;
+    box-shadow: 2px 2px 59px 2px #92f8f6;
+    
+}
+
+#time-left{
+    font-size: x-large;
+}
+
+#break-container{
+    @include setMarginTopBottom(2vw,2vw);
+    margin-left: 3vw;
+}
+
+#break-increment{
+    margin-right: 2vw;
+}
+
+#break-decrement{
+    margin-left: 2vw;
+}
+
+#session-container{
+    @include setMarginTopBottom(2vw,2vw);
+    margin-left: 3vw;
+}
+
+#session-increment{
+    margin-right: 2vw;
+}
+
+#session-decrement{
+    margin-left: 2vw;
+}
+
+#control-button-container{
+    margin-top: 2vw;
+}
+
+#start_stop{
+    margin-left:5vw;
+    padding:1vw;
+}
+
+#reset{
+    margin-left: 2vw;
+    padding-left:1vw;
+    padding-right:1vw;
+    @include paddingTopBottom(0.5vw,0.5vw);
+}
+
+
+//4k screens
+@media (min-width:2400px){
+    #timer-label{
+        @include paddingTopBottom(4vw,4vw);  
+    }
+    #time-left{
+        font-size:xx-large
+    }
+
+    #break-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 3vw;
+    }
+
+    #break-length{
+        font-size: xx-large;
+    }
+
+    #session-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 3vw;
+    }
+
+    #session-length{
+        font-size: xx-large;
+    }
+
+    #start_stop{
+        margin-left:5vw;
+        padding:1vw;
+    }
+}
+
+//low resolution laptops, tablets
+@media (min-width:862px)and(max-width:1050px){
+    #timer-label{
+        @include paddingTopBottom(4vw,4vw); 
+        @include setMarginTopBottom(3vw,3vw); 
+    }
+    #break-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 4vw;
+    }
+    #session-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 4vw;
+    }
+    #start_stop{
+        margin-left:5vw;
+    }
+}
+
+//high resolution phones
+@media (min-width:631px) and (max-width:861px){
+    #timer-label{
+        @include paddingTopBottom(6vw,5vw);
+        @include setMarginTopBottom(6vw,6vw); 
+    }
+    #break-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 5vw;
+    }
+
+    #break-increment{
+        margin-right: 4vw;
+    }
+    
+    #break-decrement{
+        margin-left: 4vw;
+    }
+
+    #session-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 5vw;
+    }
+
+    #session-increment{
+        margin-right: 4vw;
+    }
+    
+    #session-decrement{
+        margin-left: 4vw;
+    }
+
+    #start_stop{
+        margin-left:10vw;
+        padding:2vw; 
+    }
+
+    #reset{
+        margin-left: 4vw;
+    }
+}
+
+
+// medium-high resolution phones
+@media (min-width:520px) and (max-width:630px){
+    #timer-label{
+        @include paddingTopBottom(6vw,5vw);
+        @include setMarginTopBottom(8vw,8vw); 
+    }
+
+    #break-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 5vw;
+    }
+
+    #break-increment{
+        margin-right: 6vw;
+    }
+    
+    #break-decrement{
+        margin-left: 6vw;
+    }
+
+    #session-container{
+        @include setMarginTopBottom(3vw,3vw);
+        margin-left: 5vw;
+    }
+
+    #session-increment{
+        margin-right: 6vw;
+    }
+    
+    #session-decrement{
+        margin-left: 6vw;
+    }
+
+    #control-button-container{
+        margin-top: 8vw;
+    }
+
+    #start_stop{
+        margin-left:10vw;
+        padding:2vw; 
+    }
+
+    #reset{
+        margin-left: 4vw;
+    }
+}
+
+//phones medium resolution
+@media (min-width:461px) and (max-width:519px){
+    #timer-label{
+        @include paddingTopBottom(7vw,7vw);
+        @include setMarginTopBottom(12vw,12vw); 
+    }
+    #break-container{
+        @include setMarginTopBottom(4vw,4vw);
+        margin-left: 5vw;
+    }
+
+    #break-increment{
+        margin-right: 7vw;
+    }
+    
+    #break-decrement{
+        margin-left: 7vw;
+    }
+
+    #session-container{
+        @include setMarginTopBottom(4vw,4vw);
+        margin-left: 5vw;
+    }
+
+    #session-increment{
+        margin-right: 7vw;
+    }
+    
+    #session-decrement{
+        margin-left: 7vw;
+    }
+
+    #control-button-container{
+        margin-top: 8vw;
+    }
+
+    #start_stop{
+        margin-left:10vw;
+        padding:3vw; 
+    }
+
+    #reset{
+        margin-left: 5vw;
+    }
+}
+
+
+//medium-low resolution phones
+@media (min-width:350px) and (max-width:460px){
+    #timer-label{
+        @include paddingTopBottom(10vw,10vw); 
+        @include setMarginTopBottom(12vw,12vw); 
+    }
+
+    #break-container{
+        @include setMarginTopBottom(5vw,5vw);
+        margin-left: 7vw;
+    }
+
+    #break-increment{
+        margin-right: 8vw;
+    }
+    
+    #break-decrement{
+        margin-left: 8vw;
+    }
+
+    #session-container{
+        @include setMarginTopBottom(5vw,5vw);
+        margin-left: 7vw;
+    }
+
+    #session-increment{
+        margin-right: 8vw;
+    }
+    
+    #session-decrement{
+        margin-left: 8vw;
+    }
+
+    #control-button-container{
+        margin-top: 10vw;
+    }
+
+    #start_stop{
+        margin-left:15vw;
+        padding:5vw; 
+    }
+
+    #reset{
+        margin-left: 7vw;
+        padding-left:2vw;
+        padding-right:2vw;
+        @include paddingTopBottom(2vw,2vw);
+    }
+}
+
+//low resolution phones
+@media(max-width:349px){
+    #timer-label{
+        @include paddingTopBottom(15vw,15vw); 
+        @include setMarginTopBottom(13vw,13vw); 
+    }
+
+    #break-container{
+        @include setMarginTopBottom(7vw,7vw);
+        margin-left: 8vw;
+    }
+
+    #break-increment{
+        margin-right: 13vw;
+    }
+    
+    #break-decrement{
+        margin-left: 13vw;
+    }
+
+    #session-container{
+        @include setMarginTopBottom(7vw,7vw);
+        margin-left: 8vw;
+    }
+
+    #session-increment{
+        margin-right: 13vw;
+    }
+    
+    #session-decrement{
+        margin-left: 13vw;
+    }
+
+    #control-button-container{
+        margin-top: 15vw;
+    }
+
+    #start_stop{
+        margin-left:16vw;
+        padding:5vw; 
+    }
+
+    #reset{
+        margin-left: 10vw;
+        padding-left:3vw;
+        padding-right:3vw;
+        @include paddingTopBottom(3vw,3vw);
+    }
+}
